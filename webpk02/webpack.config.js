@@ -11,7 +11,16 @@ module.exports = {
     },
     plugins:[
         new htmlWebPackPlugin({
-            template:"./src/view/index.html"
+            filename:"a.html",
+            template:"./src/view/index.html",
+            chunks:['a']
+        }),
+        new htmlWebPackPlugin({
+            filename:"b.html",
+            template:"./src/view/index.html",
+            chunks:['b'],
+            excludeChunks:['a']
+            
         })
     ]
 }
