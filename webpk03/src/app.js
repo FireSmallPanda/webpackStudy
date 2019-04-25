@@ -1,5 +1,5 @@
 import "./css/common.css"
-import layer from "./components/layer/layer"
+import "./components/layer/layer.less"
 const App = function cuntion(){
 
 }

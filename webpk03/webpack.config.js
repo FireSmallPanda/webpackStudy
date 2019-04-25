@@ -15,8 +15,12 @@ module.exports = {
             loader: "babel-loader" },
             { 
                 test: /\.css$/, 
-                loader: "style-loader!css-loader!postcss-loader" 
-            }
+                loader: "style-loader!css-loader!postcss-loader"  // 从右到左
+            },
+            { 
+                test: /\.less$/, 
+                loader: "style-loader!css-loader!postcss-loader!less-loader" 
+            },
         ]
     },
     plugins: [
